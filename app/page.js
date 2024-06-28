@@ -1,3 +1,5 @@
+import Search from "@/components/search/Search";
+
 const HomePage = () => {
   return (
     <section className="bg-[#F6F3E9] h-screen max-h-screen relative grid place-items-center bg-[url('../public/hero-bg.jpg')] bg-cover bg-no-repeat bg-center">
@@ -10,6 +12,7 @@ const HomePage = () => {
             We have 459 rooms spread throuout Indonesia with room standards
             equivalent to 5 star hotels.
           </p>
+          <Search />
         </div>
       </div>
     </section>
