@@ -1,9 +1,15 @@
-import React from 'react'
+import Gallery from "@/components/hotel/details/Gallery";
+import Overview from "@/components/hotel/details/Overview";
+import Summary from "@/components/hotel/details/Summary";
 
-const page = () => {
+const HotelDetails = () => {
   return (
-    <div>page</div>
-  )
-}
+    <>
+      <Summary />
+      <Gallery />
+      <Overview />
+    </>
+  );
+};
 
-export default page
+export default HotelDetails;
