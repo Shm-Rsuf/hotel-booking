@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import HotelSummaryInfo from "./HotelSummaryInfo";
 
-const HotelCard = () => {
+const HotelCard = ({ hotels }) => {
   return (
     <div className='flex gap-6 border border-gray/20 p-4 rounded-md'>
       <img
