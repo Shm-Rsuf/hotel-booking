@@ -5,7 +5,7 @@ import Image from "next/image";
 const SocialLogins = () => {
   /* handleGoogleSignIn */
   const handleGoogleSignIn = (evt) => {
-    signIn("google");
+    signIn("google", { callbackUrl: "http://localhost:3000/bookings" });
   };
   return (
     <>
