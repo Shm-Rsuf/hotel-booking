@@ -26,16 +26,17 @@ const Navbar = ({ sideMenu }) => {
           <Link href='#'>Contact us</Link>
         </li>
 
-        <li>
-          <Link href='/bookings'>Bookings</Link>
-        </li>
-
         {sideMenu && (
-          <li>
-            <Link href='/login' className='login'>
-              Login
-            </Link>
-          </li>
+          <>
+            <li>
+              <Link href='/bookings'>Bookings</Link>
+            </li>
+            <li>
+              <Link href='/login' className='login'>
+                Login
+              </Link>
+            </li>
+          </>
         )}
       </ul>
     </nav>
