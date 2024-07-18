@@ -2,6 +2,7 @@ import { MongoDBAdapter } from "@auth/mongodb-adapter";
 import NextAuth from "next-auth";
 import FacebookProvider from "next-auth/providers/facebook";
 import GoogleProvider from "next-auth/providers/google";
+import clientPromise from "./database/mongoClientPromise";
 
 export const {
   auth,
