@@ -1,36 +1,35 @@
 "use client";
 
 import { login } from "@/app/actions";
+
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 const LoginForm = () => {
   const [error, setError] = useState("");
   const router = useRouter();
-  /* handleSubmit */
-  const onSubmit = async (event) => {
+
+  async function onSubmit(event) {
+    console.log(event);
+
     event.preventDefault();
 
-    // const formData = new FormData(event.currentTarget);
-    const formData = new FormData(event.currentTarget);
-    console.log(formData);
-
-    const response = await login(formData);
-
-    if (!!response.error) {
-      setError(response.error.message);
-    } else {
-      router.push("/");
-    }
-
     try {
-    } catch (error) {
-      setError(error.message);
+      const formData = new FormData(event.currentTarget);
+      const response = await login(formData);
+      if (!!response.error) {
+        setError(response.error);
+      } else {
+        router.push("/bookings");
+      }
+    } catch (err) {
+      setError(err.message);
     }
-  };
+  }
+
   return (
     <>
-      {error && <div className='text-lg text-red-500 text-center'>{error}</div>}
+      {error && <div className='text-xl text-red-500 text-center'>{error}</div>}
       <form className='login-form' onSubmit={onSubmit}>
         <div>
           <label htmlFor='email'>Email Address</label>
