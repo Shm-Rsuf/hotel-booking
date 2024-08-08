@@ -1,9 +1,9 @@
 const Overview = () => {
   return (
     <section>
-      <div className='container py-8'>
-        <h2 className='font-bold text-xl my-4'>Overview</h2>
-        <p className='text-gray-600 leading-8'>
+      <div className="container py-8">
+        <h2 className="font-bold text-xl my-4">Overview</h2>
+        <p className="text-gray-600 leading-8">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi sit
           nobis saepe enim iusto quod possimus cupiditate reiciendis
           necessitatibus, similique consequatur quibusdam nulla cumque quisquam

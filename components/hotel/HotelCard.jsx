@@ -1,13 +1,12 @@
-/* eslint-disable @next/next/no-img-element */
 import HotelSummaryInfo from "./HotelSummaryInfo";
 
-const HotelCard = ({ hotels }) => {
+const HotelCard = () => {
   return (
-    <div className='flex gap-6 border border-gray/20 p-4 rounded-md'>
+    <div className="flex gap-6 border border-gray/20 p-4 rounded-md">
       <img
-        src='./images/image-1.png'
-        className='max-h-[162px] max-w-[240px]'
-        alt=''
+        src="./assets/images/image-1.png"
+        className="max-h-[162px] max-w-[240px]"
+        alt=""
       />
       <HotelSummaryInfo fromListPage={true} />
     </div>

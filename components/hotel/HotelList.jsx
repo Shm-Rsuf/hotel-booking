@@ -1,13 +1,14 @@
-import { getAllHotels } from "@/database/queries";
 import HotelCard from "./HotelCard";
+import { getAllHotels } from "@/database/queries";
 
 const HotelList = async () => {
-  const hotels = await getAllHotels();
+  const allHotels = await getAllHotels();
+  console.log(allHotels);
 
   return (
-    <div className='col-span-9'>
-      <div className='space-y-4'>
-        <HotelCard hotels={hotels} />
+    <div className="col-span-9">
+      <div className="space-y-4">
+       <HotelCard />
       </div>
     </div>
   );
