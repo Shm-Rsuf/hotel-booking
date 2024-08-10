@@ -19,14 +19,13 @@ export async function getAllHotels() {
   return replaceMongoIdInArray(hotels);
 }
 
-export async function getRatingsFromHotel(hotelId) {
-  const ratings = await ratingModel().find({ hotelId: hotelId }).lean();
-
+export async function getRatingsForAHotel(hotelId) {
+  const ratings = await ratingModel.find({ hotelId: hotelId }).lean();
   return replaceMongoIdInArray(ratings);
 }
 
 export async function getReviewsFromHotel(hotelId) {
-  const reviews = await reviewModel().find({ hotelId: hotelId }).lean();
+  const reviews = await reviewModel.find({ hotelId: hotelId }).lean();
 
   return replaceMongoIdInArray(reviews);
 }
