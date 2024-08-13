@@ -32,13 +32,15 @@ const HotelSummaryInfo = ({ fromListPage, info, checkin, checkout }) => {
         <h2 className='text-2xl font-bold text-right'>
           ${Math.round((info?.highRate + info?.lowRate) / 10)}/night
         </h2>
-        <p className=' text-right'>Per Night for 1 Room</p>
+        <p className='text-right'>Per Night for 1 Room</p>
         {fromListPage ? (
           <Link href={`/hotels/${info?.id}${params}`} className='btn-primary'>
             Details
           </Link>
         ) : (
-          <button className='btn-primary'>Book</button>
+          <button className={info.isBooked ? "btn-disabled" : "btn-primary"}>
+            Book
+          </button>
         )}
       </div>
     </>

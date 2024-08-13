@@ -70,6 +70,11 @@
   input[type="checkbox"] {
     @apply mx-1;
   }
+
+  .btn-disabled {
+    @apply bg-gray-600 px-8 py-2 rounded-md block text-white font-bold shadow-lg transition-all cursor-default block;
+  }
+
   button:disabled {
     @apply bg-gray-300 cursor-default;
   }
